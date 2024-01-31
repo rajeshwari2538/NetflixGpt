@@ -103,8 +103,8 @@ const Login = () => {
                 <p className="text-xs text-zinc-600  p-2 inline-block">Choose a password with a combination of capital,small alphabets and special characters.</p>
             </> : 
             <>
-              <input type="text" placeholder='Email address' key="emailSignUp" ref={emailSignIn}  className='m-2 bg-zinc-800 outline-none rounded-md p-4 w-full text-sm md:text-lg' />
-              <input type="password" placeholder='Password' key="passSignUp" ref={passwordSignIn}  className='m-2  bg-zinc-800 outline-none rounded-md p-4 w-full text-sm md:text-lg' />
+              <input type="text" placeholder='Email address' key="emailSignUp" ref={emailSignIn} defaultValue={"abcd@gmail.com"} className='m-2 bg-zinc-800 outline-none rounded-md p-4 w-full text-sm md:text-lg' />
+              <input type="password" placeholder='Password' key="passSignUp" ref={passwordSignIn} defaultValue={"Abcd@273"} className='m-2  bg-zinc-800 outline-none rounded-md p-4 w-full text-sm md:text-lg' />
             </>
             }
             {errorMessage && <p className='text-md text-red-800 m-2 p-2'>{errorMessage}</p>}
