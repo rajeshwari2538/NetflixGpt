@@ -50,13 +50,13 @@ const Header = () => {
 
   return (
     <div className={pathname.startsWith("/movie")?"hidden":"block"}>
-    <div className='px-8 py-2 bg-gradient-to-b from-black z-30 flex flex-col md:flex-row md:justify-between fixed top-0 w-full'>
+    <div className='px-8 py-2 bg-black md:bg-gradient-to-b md:from-black z-30 flex flex-col md:flex-row md:justify-between fixed top-0 w-full'>
         <img className='w-44 mx-auto md:mx-0 cursor-pointer' src={LOGO} alt="logo"/>
         {user && (
-          <div className='flex items-center gap-2'>
+          <div className='flex items-center  md:gap-2'>
             {showGptSearch && (
               <select 
-                 className='p-2 m-2 bg-gray-900 text-white rounded-md' 
+                 className='p-2 md:m-2 bg-gray-900 text-white rounded-md' 
                  onChange={handleLanguageChange}
               >
                  {SUPPORTED_LANGUAGES.map((lang) => <option key={lang.identifier} value={lang.identifier}>{lang.name}</option> )}
@@ -68,7 +68,7 @@ const Header = () => {
               {showGptSearch ? "Home" : "GPT Search"}
             </button>
           <div className='flex ml-auto md:ml-2'>
-            <img className='w-10 rounded-full' src={USER_AVATAR} alt="user-img"/>
+            <img className='w-9 md:w-10 rounded-full' src={USER_AVATAR} alt="user-img"/>
             <button className='font-bold text-white' onClick={handleSignOut}>Sign Out</button>
           </div>
         </div>
